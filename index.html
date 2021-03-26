@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carcere di Arkham</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="grid-container">
+    
+    <div class="header">
+        <div class="img-sfondo"></div>
+        <div class="Arkam">
+            <h1>Carcere di Arkham</h1>
+            <p>Gestione Manicomio Criminale di Gotham City</p>
+        </div>
+    </div>
+   
+        <div class="guardie">
+            <h2>Guardie</h2>
+            <div class="row-guardie">
+                <form id="form-guardie">
+                    <div class="input-guardie">
+                        <input type="text" name="id-guardie" id="idGuardie" class="input-field" placeholder="ID guardie">
+                            <label for="id" class="label-field">ID guardie</label>
+                    </div>  
+                    <div class="input-guardie">
+                        <input type="text" name="nome-guardie" id="nomeGuardia" class="input-field" placeholder="nome guardia">
+                            <label for="id" class="label-field">Nome Guardia</label>
+                    </div> 
+                    <div class="input-guardie">
+                        <input type="text" name="dataNasciata-guardie" id="nascitaGuardia" class="input-field" placeholder="data di nascita">
+                            <label for="id" class="label-field">Data di nascita</label>
+                    </div> 
+                    <button type="submit">Aggiungi Guardia</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="carcerati">
+            <h2>Carcerati</h2>
+            <div class="row-carcerati">
+                <form id="form-carcerati">
+                    <div class="input-carcerati">
+                        <input type="text" name="id-carcerato" id="idCarcerato" class="input-field" placeholder="ID criminale">
+                            <label for="id" class="label-field">ID criminale</label>
+                    </div>
+                    <div class="input-carcerati">
+                        <input type="text" name="Data carcerazione" id="dataCarcerazione" class="input-field" placeholder="data di carcerazione">
+                            <label for="id" class="label-field">Data di carcerazione</label>
+                    </div>
+                    <div class="input-carcerati">
+                        <input type="text" name="Data scarcerazione" id="dataScarcerazione" class="input-field" placeholder="data di scarcerazione">
+                            <label for="id" class="label-field">Data di scarcerazione</label>
+                    </div>
+                    <div class="input-crimini">
+                        <select name="option" id="crimini" class="input-field-select">
+                            <option value="Omicidio">Omicidio</option>
+                            <option value="Rapina">Rapina</option>
+                            <option value="Rapimento">Rapimento</option>
+                        </select>
+                    </div>
+                    <button type="submit"> Aggiungi Criminale</button>
+                </form>
+            </div>       
+        </div>        
+    
+    <div class="ricerca">
+        <h2 id="Carcerato-titolo">Scheda Criminale</h2>
+            <div class="input-field-container">
+                <input type="text" name="filter" id="filterInput" class="input-field " placeholder="inserisci ID criminale">
+            </div>
+            <ul class="collection"></ul>
+            <!-- <input type="button" onclick="fascicolo.html " value="ricerca fascicoli"/>
+ Ricerca Criminale </button> -->
+ <button onclick="document.location='./fascicolo.html'" target="_blank">ricerca fascicoli</button>
+    </div>
+    <div class="footer">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID-Criminale</th>
+                    <th>Data Carcerazione</th>
+                    <th>Data Scarcerazione</th>
+                    <th>Tipo di Crimine</th>
+                </tr>
+            </thead>
+            <tbody id="criminali-lista"></tbody>
+        </table>
+       <table class="table">
+            <thead>
+                <tr>
+                    <th>ID-Guardia</th>
+                    <th>Data Nascita</th>
+                    <th>Nome Guardia</th>
+                </tr>
+            </thead>
+            <tbody id="guardie-lista"></tbody>
+        </table>
+    </div>
+</div>
+<script src="app.js" type="text/javascript"> </script>
+</body>
+</html>

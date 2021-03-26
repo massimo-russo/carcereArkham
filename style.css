@@ -1,0 +1,94 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+    .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-areas:"header header " 
+                        "header header"
+                        "guardie carcerati " 
+                        "guardie carcerati " 
+                        "ricerca ricerca"
+                        "footer footer";       
+    justify-items: center;
+   color: whitesmoke;
+}
+body{
+    background-image: url('./img/sfondo.jpg');
+    background-size: cover;
+}
+h1{
+    font-size: 40px;
+    color: whitesmoke;
+    text-align: center;
+}
+h2{
+    font-size: 30px;
+}
+p{
+    font-size: 25px;
+}
+.input-field,  .input-crimini{
+    font-size: 16px;
+}
+.header { 
+    grid-area: header; 
+    text-align: center;
+}
+
+.guardie { 
+    grid-area:guardie;     
+}
+.carcerati { 
+    grid-area:carcerati;
+    
+}
+.ricerca { 
+    grid-area: ricerca; 
+    
+}
+.footer { 
+    grid-area: footer; 
+    
+}
+
+.table{
+    width: 100%;
+    box-sizing: border-box;
+    margin:1em;
+    border-spacing: 10px;   
+}
+
+tr{
+    text-align: left;
+    text-transform: capitalize;
+    
+}
+thead tr th{
+    vertical-align: bottom;
+    border-bottom: 3px solid red;
+    text-align: center;
+    }
+
+.table th{
+    border-top: 3px solid red;
+    text-align: center;
+}
+td{
+    margin:10px auto;
+}
+
+
+/*media query per adattabilità vari schermi*/
+@media only screen and(max-width:1920px)and(min-width:768px){
+    .container{
+        width:60%;
+        margin:auto;
+       }
+    }
+    @media (max-width:767px){
+        .container{
+            width:100%;
+        }
+    }
