@@ -15,7 +15,7 @@
    color: whitesmoke;
 }
 body{
-    background-image: url('./1.jpg');
+    background-image: url('sfondo.jpg');
     background-size: cover;
 }
 h1{
